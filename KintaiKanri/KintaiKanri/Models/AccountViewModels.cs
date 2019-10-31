@@ -42,14 +42,14 @@ namespace KintaiKanri.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "電子メール")]
+        [Display(Name = "メールアドレス")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "電子メール")]
+        [Display(Name = "メールアドレス")]
         [EmailAddress]
         public string Email { get; set; }
 
@@ -66,7 +66,7 @@ namespace KintaiKanri.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "電子メール")]
+        [Display(Name = "メールアドレス")]
         public string Email { get; set; }
 
         [Required]
@@ -85,7 +85,7 @@ namespace KintaiKanri.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "電子メール")]
+        [Display(Name = "メールアドレス")]
         public string Email { get; set; }
 
         [Required]
@@ -106,7 +106,7 @@ namespace KintaiKanri.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "電子メール")]
+        [Display(Name = "メールアドレス")]
         public string Email { get; set; }
     }
 }
