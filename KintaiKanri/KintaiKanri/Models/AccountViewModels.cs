@@ -48,12 +48,12 @@ namespace KintaiKanri.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "{0} を入力してください")]
         [Display(Name = "メールアドレス")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "{0} を入力してください")]
         [DataType(DataType.Password)]
         [Display(Name = "パスワード")]
         public string Password { get; set; }
@@ -64,12 +64,12 @@ namespace KintaiKanri.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "{0} を入力してください")]
         [EmailAddress]
         [Display(Name = "メールアドレス")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "{0} を入力してください")]
         [StringLength(100, ErrorMessage = "{0} の長さは {2} 文字以上である必要があります。", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "パスワード")]
