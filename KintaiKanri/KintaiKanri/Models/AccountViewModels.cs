@@ -65,6 +65,14 @@ namespace KintaiKanri.Models
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "{0} を入力してください")]
+        [Display(Name = "社員番号")]
+        public string No { get; set; }
+
+        [Required(ErrorMessage = "{0} を入力してください")]
+        [Display(Name = "社員名")]
+        public string SyainName { get; set; }
+
+        [Required(ErrorMessage = "{0} を入力してください")]
         [EmailAddress]
         [Display(Name = "メールアドレス")]
         public string Email { get; set; }
