@@ -1,0 +1,32 @@
+﻿@model IEnumerable<KintaiKanri.Models.Busho>
+
+@{
+    ViewBag.Title = "部署マスター";
+}
+
+<h2>部署マスター</h2>
+
+<p>
+    @Html.ActionLink("新規登録", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BushoName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BushoName)
+        </td>
+        <td>
+            @Html.ActionLink("修正", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("削除", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
