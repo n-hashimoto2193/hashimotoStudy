@@ -19,6 +19,10 @@ namespace KintaiKanri.Models
         {
         }
 
-        public System.Data.Entity.DbSet<KintaiKanri.Models.Busho> Bushoes { get; set; }
+        public DbSet<Busho> Bushoes { get; set; }
+        public DbSet<Kintai> Kintais { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Syain> Syains { get; set; }
+
     }
 }

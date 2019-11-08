@@ -6,22 +6,20 @@ using System.Web;
 
 namespace KintaiKanri.Models
 {
-    public class Busho
+    public class Kintai
     {
         /// <summary>
-        /// 所属部署ID
+        /// 勤怠ID
         /// </summary>
         [Key]
         public long Id { get; set; }
 
         /// <summary>
-        /// 所属部署名
+        /// 打刻時間
         /// </summary>
-        [Required(ErrorMessage = "{0} を入力してください")]
-        [Display(Name = "部署名")]
-        public string BushoName { get; set; }
+        public DateTime RecordingDate { get; set; }
 
-        public virtual ICollection<Syain> Syains { get; set; }
+        public virtual Syain Syain { get; set; }
 
     }
 }

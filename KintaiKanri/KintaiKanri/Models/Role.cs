@@ -6,22 +6,21 @@ using System.Web;
 
 namespace KintaiKanri.Models
 {
-    public class Busho
+    public class Role
     {
         /// <summary>
-        /// 所属部署ID
+        /// 権限ID
         /// </summary>
         [Key]
         public long Id { get; set; }
 
         /// <summary>
-        /// 所属部署名
+        /// 権限名
         /// </summary>
         [Required(ErrorMessage = "{0} を入力してください")]
-        [Display(Name = "部署名")]
-        public string BushoName { get; set; }
+        [Display(Name = "権限名")]
+        public string RoleName { get; set; }
 
         public virtual ICollection<Syain> Syains { get; set; }
-
     }
 }
