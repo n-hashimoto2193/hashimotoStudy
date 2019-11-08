@@ -1,20 +1,20 @@
-﻿@model KintaiKanri.Models.Busho
+﻿@model KintaiKanri.Models.Role
 
 @{
-    ViewBag.Title = "部署情報　削除";
+    ViewBag.Title = "権限情報　削除";
 }
 
-<h2>部署情報　削除</h2>
+<h2>権限情報　削除</h2>
 
 <div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.BushoName)
+            @Html.DisplayNameFor(model => model.RoleName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.BushoName)
+            @Html.DisplayFor(model => model.RoleName)
         </dd>
 
     </dl>
@@ -24,7 +24,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="削除" class="btn btn-default" /> |
-            @Html.ActionLink("部署マスターに戻る", "Index")
+            @Html.ActionLink("権限マスターに戻る", "Index")
         </div>
     }
 </div>
