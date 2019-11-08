@@ -1,0 +1,56 @@
+﻿@model IEnumerable<KintaiKanri.Models.Syain>
+
+@{
+    ViewBag.Title = "社員マスター";
+}
+
+<h2>社員マスター</h2>
+
+<p>
+    @Html.ActionLink("新規登録", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SyainName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Busho.BushoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role.RoleName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SyainName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Busho.BushoName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role.RoleName)
+        </td>
+        <td>
+            @Html.ActionLink("修正", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("削除", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>
